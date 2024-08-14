@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}  md:max-h-screen h-screen flex flex-col `}>
-         <div className="flex items-center justify-center py-[50px] ">
+         <div className="flex items-center justify-center pt-[50px] ">
           <Image
             className=""
             src="/logo.png"
