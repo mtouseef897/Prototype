@@ -41,7 +41,7 @@ const BanquetOptions = () => {
             <button
               className={`${
                 font_Anton.className
-              } text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] ${
+              } text-[16px] md:text-[22px] uppercase leading-[33.12px]  py-[8px] px-[12px]  md:py-[15px] md:px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] ${
                 state.banquetoption === item && "bg-fgorange duration-200 ease-in-out"
               }`}
             >

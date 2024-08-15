@@ -18,7 +18,7 @@ const Page2 = () => {
         Per questa sala ci sono disponibili 3 tipologie di allestimenti.
       </Text>
       <RoomSetups />
-      <Button icon={true} next={true} className="mt-auto">
+      <Button icon={true} next={true} className="!md:mt-auto">
         Continua
       </Button>
     </div>
