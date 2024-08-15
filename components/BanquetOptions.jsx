@@ -20,9 +20,9 @@ const BanquetOptions = () => {
       {selectoptions.map((item,index) => {
         return (
 
-          <div key={"banquetoption"+index}  className={`p-[10px] bg-[#222323] mt-[48px] rounded-2xl hover:bg-[#DA7B22]`}>
+          <div key={"banquetoption"+index}  className={`group p-[10px] bg-[#222323] mt-[48px] rounded-2xl hover:bg-[#DA7B22]`}>
           <button
-            className={`${font_Anton.className} text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] hover:bg-[#E69244]`}
+            className={`${font_Anton.className} text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] group-hover:bg-[#E69244]`}
           >
             {item}
           </button>

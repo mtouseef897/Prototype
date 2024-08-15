@@ -5,6 +5,12 @@
 :root {
   --foreground-rgb: 255,255,255;
   --background-rgb: 0, 0, 0;
+  --primary-color: #E69244;
+--secondary-color: #222323;
+--highlight-color: #f5f5f5;
+
+--slider-length: 400px;
+--ball-size: 25px;
 }
 
 
@@ -14,120 +20,123 @@ body {
 }
 
 
-
 .double-range-slider-container {
-  position: relative;
-  font-size: 16px;
-  color: #fff;
-  width: 17%;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    width: 400px;
+    /* width: 100% !important;
+    max-width: 724px !important; */
+    height: 100%;
+   
+    margin: 66px 20px 66px 20px !important;
 }
 
 .double-range-slider-rail {
-  background-color: #eeeeee;
-  width: 100%;
-  height: 3px;
-  border-radius: 50px;
-  z-index: 0;
+    background-color: var(--secondary-color) !important;
+    width: var(--slider-length);
+    height: 10px;
+    border-radius: 50px;
+    z-index: 0;
 }
 
 .double-range-slider-track {
-  background-color: #c1c1c1;
-  height: 3px;
-  border-radius: 50px;
-  position: absolute;
-  top: 0px;
+    background-color: var(--primary-color) !important ;
+    width: var(--slider-length);
+    height: 10px;
+    border-radius: 50px;
+    position: absolute;
+    top: 0px;
 }
 
 .double-range-slider-ball {
-  background-color: #ffffff;
-  border: #464545 1px solid;
-  z-index: 2;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: absolute;
-  cursor: pointer;
-  /* top: (-5px * calc((25px - 5px) / 5px)); */
-  top: -10px;
+    background-color: var(--highlight-color);
+    outline: var(--primary-color) 5px solid !important;
+    z-index: 2;
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius:50%;
+    position: absolute;
+    top: (-5px * calc((var(--ball-size) - 10px) / 10px));
+    cursor: pointer;
 }
 
 .double-range-slider-active {
-  z-index: 4;
+    z-index: 4;
 }
 
 .double-range-slider-tooltip {
-  background-color: #f3f4f6;
-  visibility: hidden;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  width: auto;
-  color: #4b5563;
-  text-align: center;
-  border-radius: 6px;
-  padding: 15px 20px;
-  flex-wrap: nowrap;
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  top: -45px;
+    background-color: var(--primary-color) !important;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: auto;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px !important;
+    padding: 15px 20px;
+    flex-wrap: nowrap;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Position the tooltip */
 
 .double-range-slider-ball {
-  .double-range-slider-tooltip {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .double-range-slider-tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .double-range-slider-over {
-  bottom: calc(25px / 2) + 35px;
+    bottom: calc(var(--ball-size) / 2) + 35px;
 }
 .double-range-slider-under {
-  top: calc(25px / 2) + 35px;
+    top: calc(var(--ball-size) / 2) + 35px;
 }
 
 .double-range-slider-mid {
-  bottom: calc(25px / 2) + 25px;
+    bottom: calc(var(--ball-size) / 2) + 25px;
 }
 
 .double-range-slider-over::after {
-  border-color: #f3f4f6 transparent transparent transparent;
-  top: 100%; /* At the bottom of the tooltip */
+    border-color: var(--primary-color) transparent transparent transparent !important;
+    top: 100%; /* At the bottom of the tooltip */
 }
 .double-range-slider-under::after {
-  border-color: transparent transparent #c1c1c1 transparent;
-  bottom: 100%; /* At the top of the tooltip */
+    border-color: transparent transparent var(--primary-color) transparent !important;
+    bottom: 100%; /* At the top of the tooltip */
 }
 
 .double-range-slider-tooltip::after {
-  content: " ";
-  position: absolute;
-  margin-left: var(--after-margin-left, -10px);
-  border-width: 10px;
-  border-style: solid;
-  pointer-events: none;
-  left: var(--after-left, 50%);
+    content: " ";
+    position: absolute;
+    margin-left: var(--after-margin-left, -10px);
+    border-width: 10px;
+    border-style: solid;
+    pointer-events: none;
+    left: var(--after-left, 50%);
 }
 
 .double-range-slider-text-holder {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  white-space: nowrap;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    white-space: nowrap;
 }
 
 .double-range-slider-step {
-  position: absolute;
-  z-index: 1;
-  height: 10px;
-  width: 5px;
-  border-radius: 30px;
-  background-color: #f5f5f5;
+    position: absolute;
+    z-index: 1;
+    height: 10px;
+    width: 5px;
+    border-radius: 30px;
+    background-color: var(--highlight-color);
 }
 
