@@ -20,7 +20,7 @@ const Page9 = () => {
                 className='w-[88px] h-[88px] opacity-10'
                 />
             </div>
-      <Button icon={true} next={true} className="mt-auto">
+      <Button icon={true} next={true} className="!md:mt-auto">
       INVIA LA TUA RICHIESTA
       </Button>
     </div>
