@@ -6,14 +6,13 @@ import AnimatedContainer from "./AnimatedContainer";
 import animation from "@/animation";
 import { useEvent } from "@/context/EventContext";
 
-
 const font_Plus_Jakarta_Sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: "400",
 });
 
 const RegForm = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const eventslist = [
     "Congresses",
     "Exhibitions and exhibitions",
@@ -36,7 +35,7 @@ const RegForm = () => {
     updateNightStay,
     updateBanquetOption,
     updateBarOption,
-    updateEventType
+    updateEventType,
   } = useEvent();
 
   return (
@@ -143,22 +142,28 @@ const RegForm = () => {
             <label htmlFor="" className="text-[16px] font-medium">
               Tipologia evento
             </label>
-            <div onClick={()=>setOpen(~open)} className=" cursor-pointer"><IoIosArrowDown/></div>
+            <div onClick={() => setOpen(~open)} className=" cursor-pointer">
+              <IoIosArrowDown />
+            </div>
           </div>
-          <AnimatedContainer trigger={open} animation={animation.OpenClose}><ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border border-white rounded-[13px] border-opacity-10 bg-white/10 backdrop-blur-2xl p-6 mt-3 w-full">
-            {eventslist.map((item, index) => {
-              return (
-                <li
-                  onClick={()=>updateEventType(item)}
-                  key={"eventtype" + item}
-                  className={` opacity-70 font-normal ${state.eventtype===item && "text-bgorange"} cursor-pointer`}
-                >
-                  {item}
-                </li>
-              );
-            })}
-          </ul></AnimatedContainer>
-   
+          <AnimatedContainer trigger={open} animation={animation.OpenClose}>
+            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border border-white rounded-[13px] border-opacity-10 bg-white/10 backdrop-blur-2xl p-6 mt-3 w-full">
+              {eventslist.map((item, index) => {
+                return (
+                  <li
+                    // onClick={()=>updateEventType(item)}
+                    // ${state.eventtype === item && "text-bgorange"} 
+                    key={"eventtype" + item}
+                    className={` opacity-70 font-normal hover:text-bgorange duration-200 ease-in-out
+
+                      cursor-pointer`}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </AnimatedContainer>
         </div>
       </div>
     </form>
