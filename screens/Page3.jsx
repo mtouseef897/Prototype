@@ -6,7 +6,7 @@ import ExtraEquipment from "@/components/ExtraEquipment";
 
 const Page3 = () => {
   return (
-    <div className=" flex-1 text-white flex flex-col items-center justify-center ">
+    <div className=" flex-1 text-white flex flex-col items-center ">
       <Heading>
       SCEGLI L'ATTREZZATURA E I SERVIZI EXTRA
       </Heading>

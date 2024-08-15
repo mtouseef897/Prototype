@@ -5,16 +5,21 @@ import Text from "@/components/Text";
 
 const Page8 = () => {
   return (
-    <div className=" flex-1 text-white flex flex-col items-center justify-center ">
-      <Heading>
-        HAI SCELTO LA SALA "ZEUS" - 780MQ SELEZIONA IL TUO ALLESTIMENTO
+    <div className=" flex-1 text-white flex flex-col items-center  ">
+      <Heading className="mt-32">
+      COME DESIDERI ESSERE CONTATTATO
       </Heading>
       <Text>
-      Per questa sala ci sono disponibili 3 tipologie di allestimenti.
+      Scegli una delle opzioni presenti e ti contatteremo al più presto.
       </Text>
-      <Button icon={true} next={true}>
-        Continua
-      </Button>
+      <div className="flex items-center justify-center gap-8 mt-auto">
+        <Button icon={true} next={true}>
+          email
+        </Button>
+        <Button icon={true} next={true}>
+          telefono
+        </Button>
+      </div>
     </div>
   );
 };

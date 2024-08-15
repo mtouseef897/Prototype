@@ -5,16 +5,21 @@ import Text from "@/components/Text";
 
 const Page7 = () => {
   return (
-    <div className=" flex-1 text-white flex flex-col items-center justify-center ">
-      <Heading>
-        HAI SCELTO LA SALA "ZEUS" - 780MQ SELEZIONA IL TUO ALLESTIMENTO
+    <div className=" flex-1 text-white flex flex-col items-center  ">
+      <Heading className="mt-32">
+      COMPLETA LA TUA RICHIESTA
       </Heading>
       <Text>
-      Per questa sala ci sono disponibili 3 tipologie di allestimenti.
+      Inserite i vostri dati.
       </Text>
-      <Button icon={true} next={true}>
-        Continua
-      </Button>
+      <div className="flex items-center justify-center gap-8 mt-auto">
+        <Button icon={true} next={false}>
+          indietro
+        </Button>
+        <Button icon={true} next={true}>
+          Continua
+        </Button>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const DoubleSliderCounter = () => {
   });
   return (
     <>
-      <div>
+      <div className="mt-[86px]">
         <div
           className={`flex items-center justify-center gap-2 border py-[50px] px-[70px] border-white border-opacity-10 rounded-xl bg-white/5 backdrop-blur-2xl text-[48px] ${font_Anton.className} `}
         >
@@ -20,8 +20,7 @@ const DoubleSliderCounter = () => {
           <div>-</div>
           <div>{peopleCount.max}</div>
         </div>
-      </div>
-      <RangeSlider
+        {/* <RangeSlider
         value={{ min: 10, max: 1000 }}
         
         onChange={(e) => {
@@ -32,7 +31,9 @@ const DoubleSliderCounter = () => {
         }}
         tooltipPosition="under"
         tooltipVisibility="always"
-      />
+      /> */}
+      </div>
+     
     </>
   );
 };
