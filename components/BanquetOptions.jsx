@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Anton } from "next/font/google";
+import { useEvent } from "@/context/EventContext";
 
 const font_Anton = Anton({ subsets: ["latin"], weight: "400" });
 
@@ -13,20 +14,40 @@ const BanquetOptions = () => {
     "cena a buffet servita",
     "cena di gala",
   ];
+
+  const {
+    state,
+    updateParticipantCount,
+    updateRoomSetup,
+    updateEquipment,
+    updateNightStay,
+    updateBanquetOption,
+    updateBarOption,
+  } = useEvent();
+
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${font_Anton.className} text-[26px] leading-8 my-8`}
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${font_Anton.className} text-[26px] leading-8 my-8 `}
     >
-      {selectoptions.map((item,index) => {
+      {selectoptions.map((item, index) => {
         return (
-
-          <div key={"banquetoption"+index}  className={`group p-[10px] bg-[#222323] mt-[48px] rounded-2xl hover:bg-[#DA7B22]`}>
-          <button
-            className={`${font_Anton.className} text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] group-hover:bg-[#E69244]`}
+          <div
+            key={"banquetoption" + index}
+            onClick={() => updateBanquetOption(item)}
+            className={` p-[10px] bg-[#222323] mt-[48px] rounded-2xl ${
+              state.banquetoption === item && "bg-bgorange duration-200 ease-in-out"
+            }`}
           >
-            {item}
-          </button>
-        </div>
+            <button
+              className={`${
+                font_Anton.className
+              } text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] bg-[#343434] rounded-2xl -mt-4 flex items-center justify-center w-[328px] h-[95px] ${
+                state.banquetoption === item && "bg-fgorange duration-200 ease-in-out"
+              }`}
+            >
+              {item}
+            </button>
+          </div>
         );
       })}
     </div>

@@ -1,16 +1,28 @@
 import React from "react";
 import { Anton } from "next/font/google";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import { useEvent } from "@/context/EventContext";
 
 
 const font_Anton = Anton({ subsets: ["latin"], weight: "400" });
 
-const SelectionButton = ({ children,next=false }) => {
+const SelectionButton = ({ children,next=false,value }) => {
+
+
+  const {
+    state,
+    updateParticipantCount,
+    updateRoomSetup,
+    updateEquipment,
+    updateNightStay,
+    updateBanquetOption,
+    updateBarOption,
+  } = useEvent();
 
   return (
-    <div className={`group p-[10px] ${next?"bg-[#DA7B22]":"bg-[#222323] hover:bg-[#DA7B22]"} mt-[48px] rounded-2xl max-w-[328px]`}>
+    <div onClick={()=>updateNightStay(value)} className={` p-[10px] ${next?"bg-[#DA7B22]":"bg-[#222323]"} ${state.nightstay===value &&"bg-bgorange"} mt-[48px] rounded-2xl max-w-[328px]`}>
       <button
-        className={`${font_Anton.className} text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] ${next?"bg-[#E69244]":"bg-[#343434] group-hover:bg-[#E69244]"} rounded-2xl -mt-4 flex items-center gap-4`}
+        className={`${font_Anton.className} text-[22px] uppercase leading-[33.12px]  py-[15px] px-[32px] ${next?"bg-[#E69244]":"bg-[#343434]"} ${state.nightstay===value&&"bg-fgorange"} rounded-2xl -mt-4 flex items-center gap-4`}
       >
         {children}
       </button>

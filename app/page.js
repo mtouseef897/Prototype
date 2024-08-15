@@ -1,5 +1,7 @@
 "use client";
 
+import animation from "@/animation";
+import AnimatedContainer from "@/components/AnimatedContainer";
 import { usePage } from "@/context/PageContext";
 import Page1 from "@/screens/Page1";
 import Page2 from "@/screens/Page2";
@@ -16,17 +18,38 @@ export default function Home() {
   const { pageNumber, updatePageNumber } = usePage();
 
   return (
-    <main className="flex-1 flex">
-      {pageNumber === 0 && <WelcomeScreen />}
-      {pageNumber === 1 && <Page1 />}
-      {pageNumber === 2 && <Page2 />}
-      {pageNumber === 3 && <Page3 />}
-      {pageNumber === 4 && <Page4 />}
-      {pageNumber === 5 && <Page5 />}
-      {pageNumber === 6 && <Page6 />}
-      {pageNumber === 7 && <Page7 />}
-      {pageNumber === 8 && <Page8 />}
-      {pageNumber === 9 && <Page9 />}
-    </main>
+    <>
+
+{pageNumber === 0 && <WelcomeScreen />}
+      <AnimatedContainer trigger={pageNumber === 1} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page1 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 2} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page2 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 3} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page3 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 4} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page4 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 5} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page5 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 6} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page6 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 7} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page7 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 8} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page8 />
+      </AnimatedContainer>
+      <AnimatedContainer trigger={pageNumber === 9} animation={animation.fadeInOut} className="flex-1 flex">
+        <Page9 />
+      </AnimatedContainer>
+    </>
+ 
+   
   );
 }

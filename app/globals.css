@@ -140,3 +140,13 @@ body {
     background-color: var(--highlight-color);
 }
 
+/* Style the calendar picker indicator */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url('/date.png') no-repeat center center ;
+  background-size: contain; /* Adjust the size as needed */
+  border: none; /* Remove default border if necessary */
+  width: 16px; /* Adjust width if necessary */
+  height: 16px; /* Adjust height if necessary */
+  cursor: pointer;
+}
+

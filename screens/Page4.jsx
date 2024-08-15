@@ -4,7 +4,10 @@ import Heading from "@/components/Heading";
 import Text from "@/components/Text";
 import SelectionButton from "@/components/SelectionButton";
 
+
 const Page4 = () => {
+
+
   return (
     <div className=" flex-1 text-white flex flex-col items-center ">
       <Heading className="mt-32">
@@ -14,10 +17,10 @@ const Page4 = () => {
       Il vostro evento prevede pernottamenti?
       </Text>
       <div className="flex items-center justify-center gap-8">
-      <SelectionButton  >
+      <SelectionButton  value={"yes"}>
         si
       </SelectionButton>
-      <SelectionButton  >
+      <SelectionButton  value={"no"}>
         no
       </SelectionButton>
       </div>
