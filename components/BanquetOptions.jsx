@@ -15,7 +15,7 @@ const BanquetOptions = () => {
   ];
   return (
     <div
-      className={`grid grid-cols-3 gap-8 ${font_Anton.className} text-[26px] leading-8 mt-8`}
+      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${font_Anton.className} text-[26px] leading-8 my-8`}
     >
       {selectoptions.map((item,index) => {
         return (
