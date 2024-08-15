@@ -10,6 +10,7 @@
 --highlight-color: #f5f5f5;
 
 --slider-length: 400px;
+--slider-length-mobile: 300px;
 --ball-size: 25px;
 }
 
@@ -24,9 +25,7 @@ body {
     position: relative;
     font-size: 16px;
     color: #fff;
-    width: 400px;
-    /* width: 100% !important;
-    max-width: 724px !important; */
+    width: var(--slider-length);
     height: 100%;
    
     margin: 66px 20px 66px 20px !important;
@@ -150,3 +149,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+@media (max-width: 720px) {
+    .double-range-slider-container {
+      width: var(--slider-length-mobile) !important;
+    }
+    .double-range-slider-rail {
+      width: var(--slider-length-mobile) !important;
+    }
+  }
