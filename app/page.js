@@ -3,7 +3,7 @@
 import { usePage } from "@/context/PageContext";
 import Page1 from "@/screens/Page1";
 import Page2 from "@/screens/Page2";
-import Page3 from "@/screens/page3";
+import Page3 from "@/screens/Page3";
 import Page4 from "@/screens/Page4";
 import Page5 from "@/screens/Page5";
 import Page6 from "@/screens/Page6";

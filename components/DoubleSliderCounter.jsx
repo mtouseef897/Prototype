@@ -20,7 +20,7 @@ const DoubleSliderCounter = () => {
           <div>-</div>
           <div>{peopleCount.max}</div>
         </div>
-        {/* <RangeSlider
+        <RangeSlider
         value={{ min: 10, max: 1000 }}
         
         onChange={(e) => {
@@ -31,7 +31,7 @@ const DoubleSliderCounter = () => {
         }}
         tooltipPosition="under"
         tooltipVisibility="always"
-      /> */}
+      />
       </div>
      
     </>

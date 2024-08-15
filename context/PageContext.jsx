@@ -13,7 +13,7 @@ const updatePageNumber = (next) => {
     setPageNumber((prevPageNumber) => {
       if (next) {
         // Increment page number
-        return prevPageNumber + 1;
+        return prevPageNumber < 9 ? prevPageNumber + 1 : prevPageNumber;
       } else {
         // Decrement page number if prevPageNumber > 1, otherwise keep the same
         return prevPageNumber > 1 ? prevPageNumber - 1 : prevPageNumber;
