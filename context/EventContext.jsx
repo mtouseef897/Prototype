@@ -7,7 +7,8 @@ const initialState = {
   equipment: [],
   nightstay: false,
   banquetoption: '',
-  baroption: ''
+  baroption: '',
+  eventtype:''
 };
 
 // Create a Context for the state
@@ -24,6 +25,7 @@ export const EventProvider = ({ children }) => {
   const updateNightStay = (nightstay) => setState((prev) => ({ ...prev, nightstay }));
   const updateBanquetOption = (option) => setState((prev) => ({ ...prev, banquetoption: option }));
   const updateBarOption = (option) => setState((prev) => ({ ...prev, baroption: option }));
+  const updateEventType = (option) => setState((prev) => ({ ...prev, eventtype: option }));
 
   return (
     <EventContext.Provider value={{
@@ -33,7 +35,8 @@ export const EventProvider = ({ children }) => {
       updateEquipment,
       updateNightStay,
       updateBanquetOption,
-      updateBarOption
+      updateBarOption,
+      updateEventType
     }}>
       {children}
     </EventContext.Provider>

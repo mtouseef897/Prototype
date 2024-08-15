@@ -15,7 +15,7 @@ const WelcomeScreen = () => {
         invia il modulo di richiesta. Segui le istruzioni e divertiti a
         prenotare il tuo spazio per un evento di successo.
       </Text>
-      <Button icon={true} className="mt-[68px]">VISUALIZZA LA TUA SALA</Button>
+      <Button icon={true} className="!mt-[68px]">VISUALIZZA LA TUA SALA</Button>
     </div>
   );
 };

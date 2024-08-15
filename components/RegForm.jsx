@@ -4,6 +4,7 @@ import Heading from "./Heading";
 import { IoIosArrowDown } from "react-icons/io";
 import AnimatedContainer from "./AnimatedContainer";
 import animation from "@/animation";
+import { useEvent } from "@/context/EventContext";
 
 
 const font_Plus_Jakarta_Sans = Plus_Jakarta_Sans({
@@ -26,6 +27,18 @@ const RegForm = () => {
     "Corporate lunches and dinners",
     "Film reviews",
   ];
+
+  const {
+    state,
+    updateParticipantCount,
+    updateRoomSetup,
+    updateEquipment,
+    updateNightStay,
+    updateBanquetOption,
+    updateBarOption,
+    updateEventType
+  } = useEvent();
+
   return (
     <form
       action=""
@@ -69,7 +82,7 @@ const RegForm = () => {
           />
         </div>
       </div>
-      <div className="flex md:items-center gap-5 flex-col md:flex-row">
+      <div className="flex md:items-center gap-5 flex-col md:flex-row mt-6">
         <div className="flex-1">
           <div>
             <label htmlFor="" className="text-[16px] font-medium">
@@ -136,8 +149,9 @@ const RegForm = () => {
             {eventslist.map((item, index) => {
               return (
                 <li
+                  onClick={()=>updateEventType(item)}
                   key={"eventtype" + item}
-                  className=" opacity-70 font-normal hover:text-[#E69244] cursor-pointer"
+                  className={` opacity-70 font-normal ${state.eventtype===item && "text-bgorange"} cursor-pointer`}
                 >
                   {item}
                 </li>
