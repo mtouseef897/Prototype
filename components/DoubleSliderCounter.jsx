@@ -2,7 +2,6 @@ import { Anton } from "next/font/google";
 import React, { useState } from "react";
 import { RangeSlider } from "react-double-range-slider";
 import "react-double-range-slider/dist/cjs/index.css";
-import AnimatedNumbers from "react-animated-numbers"
 import SlotCounter from 'react-slot-counter';
 
 const font_Anton = Anton({ subsets: ["latin"], weight: "400" });
