@@ -7,7 +7,7 @@ import React from "react";
 
 const WelcomeScreen = () => {
   return (
-    <div className="flex-1 text-white flex flex-col items-center justify-center">
+    <div className="min-h-[calc(100vh-200px)]  text-white flex flex-col items-center justify-center">
       <Heading>Benvenuto nel tuo evento interattivo</Heading>
       <Text className="mt-[26px]">
         ArtemideCongressi...il tuo spazio interattivo! Simula l'ambiente del tuo

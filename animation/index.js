@@ -23,8 +23,8 @@ export const SlideInOut = {
 
 export const fadeInOut = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 2.5 } },  // 0.5 seconds duration
-    exit: { opacity: 0 }     // 0.5 seconds duration
+    animate: { opacity: 1 , transition: { duration: 2.5 }},  // 0.5 seconds duration
+    // exit: { opacity: 0}     // 0.5 seconds duration
   };
 export const slidenScaleUpDown={
     initial:{opacity:0,y:20,scale:0.7},

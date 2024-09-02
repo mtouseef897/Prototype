@@ -6,7 +6,7 @@ import RoomSetups from "@/components/RoomSetups";
 
 const Page2 = () => {
   return (
-    <div className=" flex-1 text-white flex flex-col items-center ">
+    <div className="min-h-[calc(100vh-200px)] w-full text-white flex flex-col items-center ">
 
       <Heading className="max-w-[520px]">
         HAI SCELTO LA SALA{" "}

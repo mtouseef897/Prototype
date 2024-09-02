@@ -9,7 +9,7 @@ const Page4 = () => {
 
 
   return (
-    <div className=" flex-1 text-white flex flex-col items-center ">
+    <div className="min-h-[calc(100vh-200px)] w-full text-white flex flex-col items-center ">
       <Heading className="mt-32">
       Hotel
       </Heading>

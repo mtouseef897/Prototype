@@ -8,7 +8,7 @@ import BanquetOptions from "@/components/BanquetOptions";
 const Page5 = () => {
  
   return (
-    <div className=" flex-1 text-white flex flex-col items-center">
+    <div className="min-h-[calc(100vh-200px)] w-full text-white flex flex-col items-center">
       <Heading className="mt-32">BANQUETING</Heading>
       <Text>Scegliete l'opzione più adatta alle vostre esigenze.</Text>
       <BanquetOptions/>

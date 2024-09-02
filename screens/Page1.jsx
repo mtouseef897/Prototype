@@ -8,7 +8,7 @@ import DoubleSliderCounter from "@/components/DoubleSliderCounter";
 const Page1 = () => {
 
   return (
-    <div className=" flex-1 text-white flex flex-col items-center">
+    <div className="min-h-[calc(100vh-200px)] w-full text-white flex flex-col items-center">
       <Heading>SELEZIONA IL NUMERO DI PARTECIPANTI</Heading>
       <Text className="!max-w-[354px]">
       Scorri con lo slider per scegliere il numero

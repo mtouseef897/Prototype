@@ -6,7 +6,7 @@ import RegForm from "@/components/RegForm";
 
 const Page7 = () => {
   return (
-    <div className=" flex-1 text-white flex flex-col items-center  ">
+    <div className="min-h-[calc(100vh-200px)] w-full text-white flex flex-col items-center  ">
       <Heading className="">
       COMPLETA LA TUA RICHIESTA
       </Heading>
